@@ -109,14 +109,16 @@ body{
 }
 
 
-.presentacion__imagen{
-    width: 550px;
-    height: 650px;
-    background-image: url('https://images.unsplash.com/photo-1612838320303-4b3b3b3b3b3b');
-    background-size: cover;
-    background-position: center;
-    border-radius: 6px;
-}   
+
+.presentacion__imagen {
+    width: 300px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    position: fixed; /* Ensure the image remains fixed */
+    top: 10%; /* Ajusta la posición vertical según sea necesario */
+    right: 5%; /* Ajusta la posición horizontal según sea necesario */
+    z-index: 1000; /* Ensure the image stays on top */
+}
+
 
 .header {
     padding: 2% 0% 0% 15%
