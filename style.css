@@ -1,26 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
-:root{
-    --color-primario: #000000;
-    --color-secundario: #f6f6f6;
-    --color-terciario: #22d4fd;
-    --color-hover: #272727;
-    
-    --fuente-montserrat: 'Montserrat', sans-serif;    
-    --fuente-krona: 'Krona One', sans-serif;
 * {
     padding: 0;
-    margin: 0;
+    margin:0;
 }
 
-body {
+body{
     box-sizing: border-box;
-    background-color: var(--color-primario);
-    color: var(--color-secundario);
+    background-color: #000000;
+    color: #F6F6F6;
 }
 
 .titulo-destaque {
-    color: var(--color-terciario);
+    color: #22D4FD; ;
 }
 
 .presentacion {
@@ -28,77 +20,83 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 82px;
 }
 
-.presentacion__contenido {
-    width: 615px;
+.presentacion__contenido{
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-.presentacion__contenido__titulo {
-    font-size: 36px;
-    font-family: var(--fuente-krona)
+.presentacion__contenido__titulo{
+    font-size: 2.25rem;
+    font-family: 'Krona One', sans-serif;
+    padding: 10% 0% 0% 0%;
 }
 
-.presentacion__contenido__texto {
-    font-size: 24px;
-    font-family: var(--fuente-montserrat);
+.presentacion__contenido__texto{
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
 }
 
-.presentacion__enlaces {
+.presentacion__enlaces{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
     gap: 32px;
 }
-
-.presentacion_enlaces_subtitulo {
-    font-size: 24px;
-    font-family: var(--fuente-krona);
+.presentacion_enlaces_subtitulo{
+    font-size: 1.5rem;
+    font-family: 'Krona One', sans-serif;
     font-weight: 400;
 }
 
-.presentacion__enlaces__link {
-    width: 378px;
+.presentacion__enlaces__link{
+    width: 50%;
     text-align: center;
     border-radius: 8px;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     padding: 21.5px 0;
     text-decoration: none;
-    color: var(--color-secundario);
-    font-family: var(--fuente-montserrat);
-    border: 2px solid var(--color-terciario);
-    display: flex;
+    color: #F6F6F6;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid #22D4FD;
+    display : flex;
     justify-content: center;
-    gap: 10px;
+    gap: 10px; 
 }
 
 .presentacion__enlaces__link:hover {
-    background-color: var(--color-hover);
+    background-color: #272727;
 }
 
-.footer {
+.footer{
     background-color: #22D4FD;
-    padding: 24px;
-    color: var(--color-primario);
+    padding: 1.5rem;
+    color: #000000;
     text-align: center;
-    font-family: var(--fuente-montserrat);
-    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 
 .header__menu__link {
-    font-family: var(--fuente-montserrat);
-    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
     font-weight: 600;
-    color: var(--color-terciario);
+    color: #22D4FD;
     margin: 0 10px;
     padding: 10px 15px;
     text-decoration: none;
+}
+
+.header__menu__link:hover {
+    color: #007bff;
 }
 
 .header__menu {
@@ -107,16 +105,43 @@ body {
 }
 
 .presentacion__imagen {
-    width: 300px; /* Ajusta el tamaño según sea necesario */
-    height: auto;
-    position: fixed; /* Ensure the image remains fixed */
+    width: 30%; /* Ajusta el tamaño según sea necesario */
+    position: fixed; /* Ajusta la posición según sea necesario */
     top: 10%; /* Ajusta la posición vertical según sea necesario */
     right: 5%; /* Ajusta la posición horizontal según sea necesario */
-    z-index: 1000; /* Ensure the image stays on top */
+    z-index: 1000; /* Asegura que la imagen permanezca en la parte superior */
+    justify-items: auto;
 }
-
-/* Remove the fixed-image class as it's not needed anymore */
 
 .header {
-    padding: 2% 0% 0% 15%;
+    padding: 2% 0% 0% 15%
 }
+
+@media (max-width: 1200px) {
+    .header {
+        padding: 5%;
+    }
+    .header__menu__link {
+        font-size: 1rem;               
+        margin: 0 0px;
+        padding: 0px 0px;      
+    }
+      
+    .presentacion {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .presentacion__contenido {
+        width: auto;
+    }
+    .presentacion__imagen {
+        width: 50%;
+        flex-direction: column-reverse;
+        padding: 5%;
+        position: static;
+        justify-items: auto;
+    }
+}
+/* Remove the fixed-image class as it's not needed anymore */
+
+
